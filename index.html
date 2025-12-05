@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightWeb</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="antialiased bg-white text-gray-800">
+
+<!-- NAVIGATION -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg shadow-md border-b-4 border-transparent 
+            bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 bg-[length:100%_4px] bg-bottom bg-no-repeat">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="text-2xl font-extrabold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+      BrightWeb
+    </a>
+
+    <div class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+      <a href="#home" class="hover:text-purple-600 transition">Home</a>
+      <a href="#services" class="hover:text-purple-600 transition">Services</a>
+      <a href="#" class="hover:text-purple-600 transition">About</a>
+      <a href="#contact" class="hover:text-purple-600 transition">Contact</a>
+      <a href="#" 
+         class="px-5 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-purple-600 to-blue-600 shadow-md hover:opacity-90 transition">
+        Get Started
+      </a>
+    </div>
+
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-6 space-y-4 bg-white shadow-lg">
+    <a href="#home" class="block text-gray-700 font-medium hover:text-purple-600 transition">Home</a>
+    <a href="#services" class="block text-gray-700 font-medium hover:text-purple-600 transition">Services</a>
+    <a href="#" class="block text-gray-700 font-medium hover:text-purple-600 transition">About</a>
+    <a href="#contact" class="block text-gray-700 font-medium hover:text-purple-600 transition">Contact</a>
+    <a href="#" 
+       class="block text-center px-5 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-purple-600 to-blue-600 shadow-md hover:opacity-90 transition">
+      Get Started
+    </a>
+  </div>
+
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="home" class="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20 px-6">
+  <div class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-purple-400 to-blue-500 opacity-20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-pink-400 to-purple-500 opacity-20 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+    <div class="space-y-6">
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight 
+                 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 bg-clip-text text-transparent">
+        Build Stunning Digital Experiences
+      </h1>
+      <p class="text-gray-700 text-lg md:text-xl max-w-lg">
+        Empower your ideas with beautiful, modern, and high-performance UI components crafted for startups.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 pt-2">
+        <a href="#contact" class="px-8 py-3 rounded-full text-white font-semibold shadow-lg 
+                  bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition">
+          Start Your Journey
+        </a>
+
+        <a href="#services" class="px-8 py-3 rounded-full border border-purple-500/40 text-purple-600 font-semibold 
+                  hover:bg-purple-50 transition">
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <img 
+        src="https://images.unsplash.com/photo-1682687220923-c58b9a4592ae?auto=format&fit=crop&w=900&q=80" 
+        alt="Hero Illustration"
+        class="w-full max-w-lg rounded-3xl shadow-2xl object-cover" />
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="services" class="py-20 px-6 bg-white">
+  <div class="max-w-7xl mx-auto text-center mb-14">
+    <h2 class="text-4xl md:text-5xl font-extrabold 
+               bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 bg-clip-text text-transparent">
+      Our Powerful Features
+    </h2>
+    <p class="text-gray-600 mt-3 text-lg">Everything you need to build world-class digital products.</p>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+
+    <div class="p-8 rounded-2xl bg-white shadow-lg border border-transparent 
+                hover:-translate-y-2 hover:shadow-2xl transition 
+                bg-gradient-to-br from-purple-100 via-white to-blue-100">
+      <div class="w-16 h-16 flex items-center justify-center rounded-xl 
+                  bg-gradient-to-r from-purple-600 to-blue-600 text-white mx-auto mb-6 shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-3 text-gray-800">Fast Performance</h3>
+      <p class="text-gray-600">Experience blazing-fast loading speeds and optimized workflows for high-performance apps.</p>
+    </div>
+
+    <div class="p-8 rounded-2xl bg-white shadow-lg border border-transparent 
+                hover:-translate-y-2 hover:shadow-2xl transition 
+                bg-gradient-to-br from-purple-100 via-white to-blue-100">
+      <div class="w-16 h-16 flex items-center justify-center rounded-xl 
+                  bg-gradient-to-r from-purple-600 to-blue-600 text-white mx-auto mb-6 shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-3 text-gray-800">Reliable Security</h3>
+      <p class="text-gray-600">Protect your application with industry-grade security tools and best practices.</p>
+    </div>
+
+    <div class="p-8 rounded-2xl bg-white shadow-lg border border-transparent 
+                hover:-translate-y-2 hover:shadow-2xl transition 
+                bg-gradient-to-br from-purple-100 via-white to-blue-100">
+      <div class="w-16 h-16 flex items-center justify-center rounded-xl 
+                  bg-gradient-to-r from-purple-600 to-blue-600 text-white mx-auto mb-6 shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 7h18M3 12h18M3 17h18" />
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-3 text-gray-800">Clean UI Design</h3>
+      <p class="text-gray-600">Build modern, delightful interfaces that users love with our high-quality UI system.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="py-20 px-6 bg-gradient-to-br from-purple-50 via-white to-blue-50 relative overflow-hidden">
+  <div class="absolute top-10 left-0 w-72 h-72 bg-gradient-to-r from-purple-400 to-blue-500 opacity-20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-pink-400 to-purple-500 opacity-20 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center relative z-10">
+
+    <div class="hidden lg:block">
+      <img 
+        src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=900&q=80" 
+        alt="Contact Illustration" 
+        class="rounded-3xl shadow-2xl object-cover">
+    </div>
+
+    <div class="bg-white/70 backdrop-blur-xl p-10 rounded-2xl shadow-2xl border border-white/40">
+      <h2 class="text-4xl font-extrabold mb-6 
+                 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 bg-clip-text text-transparent">
+        Get in Touch
+      </h2>
+
+      <form class="space-y-6">
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Full Name</label>
+          <input type="text" placeholder="Enter your full name" required
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Email Address</label>
+          <input type="email" placeholder="example@mail.com" required
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+          <input type="tel" placeholder="+91 98765 43210" required
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-semibold mb-2">Message</label>
+          <textarea rows="4" placeholder="Write your message..." required
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:outline-none"></textarea>
+        </div>
+
+        <button 
+          type="submit"
+          class="w-full py-3 text-white font-semibold rounded-xl shadow-lg 
+                 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 hover:opacity-90 transition">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white pt-16 pb-10 px-6 relative">
+  <div class="w-full h-1 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 rounded-full mb-10"></div>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+    <div>
+      <h2 class="text-3xl font-extrabold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+        BrightWeb
+      </h2>
+      <p class="text-gray-600 mt-3">Crafting modern, beautiful digital experiences for startups and creators.</p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-gray-600">
+        <li><a href="#home" class="hover:text-purple-600 transition">Home</a></li>
+        <li><a href="#services" class="hover:text-purple-600 transition">Services</a></li>
+        <li><a href="#" class="hover:text-purple-600 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-purple-600 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Follow Us</h3>
+      <div class="flex items-center space-x-4 text-gray-700">
+
+        <a href="#" class="p-3 rounded-xl shadow-md bg-white hover:bg-purple-50 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" 
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M7 7h10v10H7V7zm7.5-3h.01M12 12l.01-.01M7 7l10 10" />
+          </svg>
+        </a>
+
+        <a href="#" class="p-3 rounded-xl shadow-md bg-white hover:bg-purple-50 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" 
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+
+        <a href="#" class="p-3 rounded-xl shadow-md bg-white hover:bg-purple-50 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" 
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016 2a4.48 4.48 0 00-4.47 4.47c0 .35.04.7.1 1.03A12.94 12.94 0 013 3s-4 9 5 13a13.1 13.1 0 01-8 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center text-gray-500 text-sm mt-12">
+    © 2025 BrightWeb. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
